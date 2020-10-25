@@ -1,3 +1,5 @@
+**Atenção**: novas alterações serão disponibilizadas no respositório do LARVA e podem ser encontradas [aqui](https://github.com/UDESC-LARVA/BlueApiFront).
+
 # I Blue It Analytics
 
 Este é o repositório que contém a página de acesso da aplicação *web* I Blue It Analytics. Esta aplicação realiza as suas requisições a para a [API do I Blue It](https://github.com/LiserLine/BlueApiFunctions).
