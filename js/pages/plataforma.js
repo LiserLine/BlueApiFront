@@ -29,7 +29,7 @@ function initPlataformView() {
 
             var filterObj = {};
 
-            filterObj.gameDevice = $("#device-name").val();
+            filterObj.devices = $("#device-name").val();
 
             if ($("#dtPickerIni").data().date != undefined && $("#dtPickerIni").data().date != "") {
                 var dtIni = $("#dtPickerIni").data().date.split('/');
@@ -93,7 +93,7 @@ function callAjaxPlataformInfo(userId) {
         type: "GET",
         dataType: "json",
         beforeSend: function (r) {
-            r.setRequestHeader("GameToken", getSessionUserCredentialValue('gameToken'));
+            r.setRequestHeader("game-token", getSessionUserCredentialValue('gameToken'));
         },
         success: function (d) {
 
@@ -144,7 +144,7 @@ function callAjaxPlataformHistory(userId, filterObj) {
         dataType: "json",
         data: filters,
         beforeSend: function (r) {
-            r.setRequestHeader("GameToken", getSessionUserCredentialValue('gameToken'));
+            r.setRequestHeader("game-token", getSessionUserCredentialValue('gameToken'));
         },
         success: function (d) {
 

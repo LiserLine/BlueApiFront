@@ -33,7 +33,7 @@ function callAjax(userId) {
         type: "GET",
         dataType: "json",
         beforeSend: function (r) {
-            r.setRequestHeader("GameToken", getSessionUserCredentialValue('gameToken'));
+            r.setRequestHeader("game-token", getSessionUserCredentialValue('gameToken'));
         },
         success: function (d) {
             document.getElementById('table-dadosGerais-nome').textContent = d.data.name;

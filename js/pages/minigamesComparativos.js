@@ -97,7 +97,7 @@ function callAjaxRequest(filterObj) {
         dataType: "json",
         data: filters,
         beforeSend: function (r) {
-            r.setRequestHeader("GameToken", getSessionUserCredentialValue('gameToken'));
+            r.setRequestHeader("game-token", getSessionUserCredentialValue('gameToken'));
         },
         success: function (d) {
 

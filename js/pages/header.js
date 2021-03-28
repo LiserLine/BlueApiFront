@@ -37,7 +37,7 @@ function setPacientsInHeader() {
         type: "GET",
         dataType: "json",
         beforeSend: function (r) {
-            r.setRequestHeader("GameToken", gameToken);
+            r.setRequestHeader("game-token", gameToken);
         },
         success: function (d) {
             document.getElementById('pacient-select_label').style.display = '';

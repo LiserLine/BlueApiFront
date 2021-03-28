@@ -1,5 +1,6 @@
 import {
-    getSessionUserCredentialValue
+    getSessionUserCredentialValue,
+    getCurrentPacient
 } from './../app.js';
 
 function initRegistroPacienteView() {
@@ -12,7 +13,7 @@ function initRegistroPacienteView() {
         if ($("#pacient-select").val() != "") {
             document.getElementById('content-info').style.display = "none";
             document.getElementById('registroPaciente-main-container').style.display = '';
-            callAjax($("#pacient-select").val());
+            callAjax(getCurrentPacient('_id'));
         }
     }
 }
@@ -21,7 +22,7 @@ function updateRegistroPacienteView() {
     if ($("#pacient-select").val() != "") {
         document.getElementById('registroPaciente-main-container').style.display = '';
         document.getElementById('content-info').style.display = "none";
-        callAjax($("#pacient-select").val());
+        callAjax(getCurrentPacient('_id'));
     }
 }
 
@@ -34,7 +35,7 @@ function callAjax(pacientId) {
         type: "GET",
         dataType: "json",
         beforeSend: function (r) {
-            r.setRequestHeader("GameToken", getSessionUserCredentialValue('gameToken'));
+            r.setRequestHeader("game-token", getSessionUserCredentialValue('gameToken'));
         },
         success: function (d) {
 

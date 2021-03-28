@@ -8,7 +8,7 @@ import { updateCalibrationCompareView } from './pages/calibracaoComparativos.js'
 import { updatePlataformView } from './pages/plataforma.js';
 import { updatePlataformCompareView } from './pages/plataformaComparativos.js';
 
-window.API_ENDPOINT = "https://blueapi.azurewebsites.net/api";
+window.API_ENDPOINT = "https://iblueit-magrathea-apim.azure-api.net/api";
 
 $('#datetimepicker1').datetimepicker();
 
@@ -143,7 +143,7 @@ function changeHeaderInfo(){
       </tr>
       <tr>
         <td class="align-baseline"><strong>Observações:</strong></td>
-        <td id="table-dadosGerais-observacoes" class="align-baseline">${pacient.observations == 'None' ? '-' : d.data.observations}</td>
+        <td id="table-dadosGerais-observacoes" class="align-baseline">${pacient.observations == 'None' ? '-' : pacient.observations}</td>
       </tr>
     </tbody>
   </table>`;

@@ -46,9 +46,9 @@ function initToken() {
             type: "POST",
             dataType: "json",
             success: function (d) {
-                document.getElementById('inputToken').value = d.data.gameToken;
+                document.getElementById('inputToken').value = d.data.gameToken.token;
                 var userCredentials = JSON.parse(sessionStorage.getItem('userCredentials'));
-                userCredentials.gameToken = d.data.gameToken;
+                userCredentials.gameToken = d.data.gameToken.token;
                 sessionStorage.setItem('userCredentials', JSON.stringify(userCredentials));
                 document.getElementById('btnGenerateToken').disabled = true;
                 $('.alert').show();

@@ -45,7 +45,7 @@
         url: window.API_ENDPOINT + "pacients",
         type: "GET",
         beforeSend: function (r) {
-          r.setRequestHeader("GameToken", JSON.parse(sessionStorage.getItem('userCredentials')).gameToken);
+          r.setRequestHeader("game-token", JSON.parse(sessionStorage.getItem('userCredentials')).gameToken);
         },
         error: function(j, t, e){
           return [];
