@@ -1,6 +1,6 @@
 # I Blue It Analytics
 
-Este é o repositório que contém a página de acesso da aplicação *web* I Blue It Analytics. Esta aplicação realiza as suas requisições a para a [API do I Blue It](https://github.com/LiserLine/BlueApiFunctions).
+Este é o repositório que contém a página de acesso da aplicação *web* I Blue It Analytics ([clique aqui para acessar](https://green-bay-0bdc81c10.azurestaticapps.net)). Esta aplicação realiza as suas requisições a para a [API do I Blue It](https://github.com/LiserLine/BlueApiFunctions).
 
 ## Sobre
 
